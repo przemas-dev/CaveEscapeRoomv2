@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -43055666, guid: d637507f4bf30a04ba1abb4dbbde2767, type: 3}
+  m_Name: AppMetadata
+  m_EditorClassIdentifier: 
+  name: CaveEscapeRoomv2
+  aliases: []
+  tags: []
+  authors: []
+  shortDescription: 
+  longDescription: 
+  tools:
+  - Unity 2018.1.9f2
+  LzwpLibVersion: 2.9 (mock)
+  appGUID: 24CA6DE8003E405790CE454A8272DE0D
+  buildGUID: 
+  defaultConfig:
+    obstacleWallWarningScaleMultiplier: 1
+    masterInstanceCursorVisible: 1
+    slaveInstanceCursorVisible: 0
+    setMaxFov: 0
+    allowHDR: 0
+    allowMSAA: 0
+    setRenderingPath: 0
+    renderingPath: 3
