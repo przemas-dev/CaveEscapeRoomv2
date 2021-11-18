@@ -1,0 +1,157 @@
+fileFormatVersion: 2
+guid: 26612a4af198d6641aa68c6d3a61f203
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: indicator
+    100002: numberDisk
+    100004: numberDisk1
+    100006: numberDisk2
+    100008: numbers
+    100010: numbers1
+    100012: numbers2
+    100014: //RootNode
+    100016: part
+    100018: part1
+    100020: shackle
+    100022: shackle_collider
+    100024: shackle_collider.001
+    100026: shackle_collider.002
+    400000: indicator
+    400002: numberDisk
+    400004: numberDisk1
+    400006: numberDisk2
+    400008: numbers
+    400010: numbers1
+    400012: numbers2
+    400014: //RootNode
+    400016: part
+    400018: part1
+    400020: shackle
+    400022: shackle_collider
+    400024: shackle_collider.001
+    400026: shackle_collider.002
+    2100000: No Name
+    2300000: indicator
+    2300002: numberDisk
+    2300004: numberDisk1
+    2300006: numberDisk2
+    2300008: numbers
+    2300010: numbers1
+    2300012: numbers2
+    2300014: //RootNode
+    2300016: part
+    2300018: part1
+    2300020: shackle
+    2300022: shackle_collider
+    2300024: shackle_collider.001
+    2300026: shackle_collider.002
+    3300000: indicator
+    3300002: numberDisk
+    3300004: numberDisk1
+    3300006: numberDisk2
+    3300008: numbers
+    3300010: numbers1
+    3300012: numbers2
+    3300014: //RootNode
+    3300016: part
+    3300018: part1
+    3300020: shackle
+    3300022: shackle_collider
+    3300024: shackle_collider.001
+    3300026: shackle_collider.002
+    4300000: body
+    4300002: part
+    4300004: part1
+    4300006: shackle
+    4300008: shackle_collider
+    4300010: shackle_collider.002
+    4300012: shackle_collider.001
+    4300014: numberDisk1
+    4300016: numbers1
+    4300018: numberDisk
+    4300020: numbers
+    4300022: numberDisk2
+    4300024: numbers2
+    4300026: indicator
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
