@@ -131,7 +131,7 @@ public class Padlock : MonoBehaviour, IInteractable
             collider.enabled = false;
         }
 
-        gameObject.AddComponent<Pickable>();
+        gameObject.AddComponent<Grabable>();
         _isOpened = true;
     }
 }

@@ -3,7 +3,7 @@ using System;
 using UnityEngine;
 
 
-// could be in a separate file
+// could be in separate file
 public partial class CustomAppConfig
 {
     [Serializable]

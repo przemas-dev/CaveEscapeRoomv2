@@ -13,7 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wrapper:
     debug:
-      logToHtml: 1
+      logToHtml: 0
       htmlLogFileName: log_[INSTANCE_ID]_[DATETIME].html
     display:
       stereoscopyMode: 1
@@ -25,12 +25,11 @@ MonoBehaviour:
       cursorVisible: 1
     sync:
       masterInstanceID: 0
-      serverIP: 127.0.0.1
+      serverIP: 127.0.0.7
       port: 54321
       sendRate: 60
       quitOnDisconnection: 1
       maxConnectionTries: 5
-      maxConnections: 32
     input:
       posesStartingPosition: {x: 0, y: 1.75, z: 0}
       posesStartingRotation: {x: 0, y: 0, z: 0}
@@ -57,10 +56,8 @@ MonoBehaviour:
         - name: Flystick2 00612
           positionCorrection: {x: 0, y: 0, z: 0}
           rotationCorrection: {x: 0, y: 0, z: 0}
-        hands: []
         posesListStartingIdx: 0
         joysitckThreshold: 0.01
-      arthumans: []
     instances:
     - name: INST_1
       debug:
@@ -162,6 +159,24 @@ MonoBehaviour:
       centre: {x: 0, y: 0, z: 0.6}
       normal: {x: 0, y: 0, z: -1}
       up: {x: 0, y: 1, z: 0}
+      width: 0.6
+      height: 0.34
+    - name: LEFT
+      centre: {x: -0.31, y: 0, z: 0.3}
+      normal: {x: 1, y: 0, z: 0}
+      up: {x: 0, y: 1, z: 0}
+      width: 0.6
+      height: 0.34
+    - name: RIGHT
+      centre: {x: 0.31, y: 0, z: 0.3}
+      normal: {x: -1, y: 0, z: 0}
+      up: {x: 0, y: 1, z: 0}
+      width: 0.6
+      height: 0.34
+    - name: FLOOR
+      centre: {x: 0, y: -0.17, z: 0.42}
+      normal: {x: 0, y: 1, z: 0}
+      up: {x: 0, y: 0, z: 1}
       width: 0.6
       height: 0.34
     screensAndObstacleWallsOffsetFromOrigin: {x: 0, y: 1.65, z: 0}

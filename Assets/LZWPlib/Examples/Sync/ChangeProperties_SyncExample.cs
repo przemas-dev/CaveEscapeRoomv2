@@ -35,9 +35,8 @@ public class ChangeProperties_SyncExample : MonoBehaviour
 
     void ChangeSize()
     {
-        float s = Random.Range(0.6f, 2f);
-        transform.localScale = Vector3.one * s;
-        nv.RPC("ChangeSizeRPC", RPCMode.OthersBuffered, s);
+        transform.localScale = Vector3.one * Random.Range(0.6f, 2f);
+        nv.RPC("ChangeSizeRPC", RPCMode.OthersBuffered, transform.localScale.x);
     }
 
     [RPC]

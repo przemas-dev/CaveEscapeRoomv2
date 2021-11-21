@@ -14,7 +14,6 @@ public class MovementConfig
 
     public MovementController.MovementConfig movementSettings = new MovementController.MovementConfig();
 }
-
 public partial class CustomAppConfig
 {
     public MovementConfig movement = new MovementConfig();

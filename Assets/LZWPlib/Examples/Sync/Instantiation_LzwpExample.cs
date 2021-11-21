@@ -100,8 +100,7 @@ public class Instantiation_LzwpExample : LZWPlib.UnitySingleton<Instantiation_Lz
         {
             GameObject cube = Network.Instantiate(cubePrefab, indicatorAdding.transform.position, indicatorAdding.transform.rotation, 0) as GameObject;
 
-            //cube.GetComponent<InstantiatedCube_SyncExample>().InitCube(indicatorAdding.transform.position, indicatorAdding.transform.rotation, mat.color);
-            cube.GetComponent<InstantiatedCube_SyncExample>().InitCube(mat.color);
+            cube.GetComponent<InstantiatedCube_SyncExample>().InitCube(indicatorAdding.transform.position, indicatorAdding.transform.rotation, mat.color);
 
             SetRandomIndicatorColor();
         }

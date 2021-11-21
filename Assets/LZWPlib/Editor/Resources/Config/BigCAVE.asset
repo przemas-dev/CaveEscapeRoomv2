@@ -30,10 +30,7 @@ MonoBehaviour:
       sendRate: 60
       quitOnDisconnection: 1
       maxConnectionTries: 5
-      maxConnections: 32
     input:
-      posesStartingPosition: {x: 0, y: 1.75, z: 0}
-      posesStartingRotation: {x: 0, y: 0, z: 0}
       dtracks:
       - name: DTrack BigCAVE
         enabled: 1
@@ -57,17 +54,15 @@ MonoBehaviour:
         - name: Flystick2 00608
           positionCorrection: {x: 0, y: 0, z: 0}
           rotationCorrection: {x: 0, y: 0, z: 0}
-        hands: []
         posesListStartingIdx: 0
         joysitckThreshold: 0.01
-      arthumans: []
     instances:
     - name: CAVE-CTRL
       debug:
         logToHtml: 1
         htmlLogFileName: log_[INSTANCE_ID]_[DATETIME].html
-        inherit_logToHtml: 1
-        inherit_htmlLogFileName: 1
+        inheritLogToHtml: 1
+        inheritHtmlLogFileName: 1
       cameras:
       - screenIdx: 0
         displayIdx: 0
@@ -83,13 +78,11 @@ MonoBehaviour:
         setMaxFov: 0
         allowHDR: 0
         allowMSAA: 0
-        setRenderingPath: 0
         renderingPath: 3
-        inherit_setMaxFov: 1
-        inherit_allowHDR: 1
-        inherit_allowMSAA: 1
-        inherit_setRenderingPath: 1
-        inherit_renderingPath: 1
+        inheritSetMaxFov: 1
+        inheritAllowHDR: 1
+        inheritAllowMSAA: 1
+        inheritRenderingPath: 1
       display:
         stereoscopyMode: 1
         eyeSeparation: 0.05
@@ -98,19 +91,19 @@ MonoBehaviour:
         setWindowPos: 0
         windowPos: {x: 0, y: 0}
         cursorVisible: 1
-        inherit_stereoscopyMode: 1
-        inherit_eyeSeparation: 1
-        inherit_swapEyes: 1
-        inherit_fullscreen: 1
-        inherit_setWindowPos: 1
-        inherit_windowPos: 1
-        inherit_cursorVisible: 1
+        inheritStereoscopyMode: 1
+        inheritEyeSeparation: 1
+        inheritSwapEyes: 1
+        inheritFullscreen: 1
+        inheritSetWindowPos: 1
+        inheritWindowPos: 1
+        inheritCursorVisible: 0
     - name: FRONT-TOP
       debug:
         logToHtml: 1
         htmlLogFileName: log_[INSTANCE_ID]_[DATETIME].html
-        inherit_logToHtml: 1
-        inherit_htmlLogFileName: 1
+        inheritLogToHtml: 1
+        inheritHtmlLogFileName: 1
       cameras:
       - screenIdx: 1
         displayIdx: 0
@@ -126,13 +119,11 @@ MonoBehaviour:
         setMaxFov: 0
         allowHDR: 0
         allowMSAA: 0
-        setRenderingPath: 0
         renderingPath: 3
-        inherit_setMaxFov: 1
-        inherit_allowHDR: 1
-        inherit_allowMSAA: 1
-        inherit_setRenderingPath: 1
-        inherit_renderingPath: 1
+        inheritSetMaxFov: 1
+        inheritAllowHDR: 1
+        inheritAllowMSAA: 1
+        inheritRenderingPath: 1
       display:
         stereoscopyMode: 1
         eyeSeparation: 0.05
@@ -141,19 +132,19 @@ MonoBehaviour:
         setWindowPos: 0
         windowPos: {x: 0, y: 0}
         cursorVisible: 0
-        inherit_stereoscopyMode: 1
-        inherit_eyeSeparation: 1
-        inherit_swapEyes: 1
-        inherit_fullscreen: 1
-        inherit_setWindowPos: 1
-        inherit_windowPos: 1
-        inherit_cursorVisible: 1
+        inheritStereoscopyMode: 1
+        inheritEyeSeparation: 1
+        inheritSwapEyes: 1
+        inheritFullscreen: 1
+        inheritSetWindowPos: 1
+        inheritWindowPos: 1
+        inheritCursorVisible: 1
     - name: FRONT-BOTTOM
       debug:
         logToHtml: 1
         htmlLogFileName: log_[INSTANCE_ID]_[DATETIME].html
-        inherit_logToHtml: 1
-        inherit_htmlLogFileName: 1
+        inheritLogToHtml: 1
+        inheritHtmlLogFileName: 1
       cameras:
       - screenIdx: 2
         displayIdx: 0
@@ -169,13 +160,11 @@ MonoBehaviour:
         setMaxFov: 0
         allowHDR: 0
         allowMSAA: 0
-        setRenderingPath: 0
         renderingPath: 3
-        inherit_setMaxFov: 1
-        inherit_allowHDR: 1
-        inherit_allowMSAA: 1
-        inherit_setRenderingPath: 1
-        inherit_renderingPath: 1
+        inheritSetMaxFov: 1
+        inheritAllowHDR: 1
+        inheritAllowMSAA: 1
+        inheritRenderingPath: 1
       display:
         stereoscopyMode: 1
         eyeSeparation: 0.05
@@ -184,19 +173,19 @@ MonoBehaviour:
         setWindowPos: 0
         windowPos: {x: 0, y: 0}
         cursorVisible: 0
-        inherit_stereoscopyMode: 1
-        inherit_eyeSeparation: 1
-        inherit_swapEyes: 1
-        inherit_fullscreen: 1
-        inherit_setWindowPos: 1
-        inherit_windowPos: 1
-        inherit_cursorVisible: 1
+        inheritStereoscopyMode: 1
+        inheritEyeSeparation: 1
+        inheritSwapEyes: 1
+        inheritFullscreen: 1
+        inheritSetWindowPos: 1
+        inheritWindowPos: 1
+        inheritCursorVisible: 1
     - name: RIGHT-TOP
       debug:
         logToHtml: 1
         htmlLogFileName: log_[INSTANCE_ID]_[DATETIME].html
-        inherit_logToHtml: 1
-        inherit_htmlLogFileName: 1
+        inheritLogToHtml: 1
+        inheritHtmlLogFileName: 1
       cameras:
       - screenIdx: 3
         displayIdx: 0
@@ -212,13 +201,11 @@ MonoBehaviour:
         setMaxFov: 0
         allowHDR: 0
         allowMSAA: 0
-        setRenderingPath: 0
         renderingPath: 3
-        inherit_setMaxFov: 1
-        inherit_allowHDR: 1
-        inherit_allowMSAA: 1
-        inherit_setRenderingPath: 1
-        inherit_renderingPath: 1
+        inheritSetMaxFov: 1
+        inheritAllowHDR: 1
+        inheritAllowMSAA: 1
+        inheritRenderingPath: 1
       display:
         stereoscopyMode: 1
         eyeSeparation: 0.05
@@ -227,19 +214,19 @@ MonoBehaviour:
         setWindowPos: 0
         windowPos: {x: 0, y: 0}
         cursorVisible: 0
-        inherit_stereoscopyMode: 1
-        inherit_eyeSeparation: 1
-        inherit_swapEyes: 1
-        inherit_fullscreen: 1
-        inherit_setWindowPos: 1
-        inherit_windowPos: 1
-        inherit_cursorVisible: 1
+        inheritStereoscopyMode: 1
+        inheritEyeSeparation: 1
+        inheritSwapEyes: 1
+        inheritFullscreen: 1
+        inheritSetWindowPos: 1
+        inheritWindowPos: 1
+        inheritCursorVisible: 1
     - name: RIGHT-BOTTOM
       debug:
         logToHtml: 1
         htmlLogFileName: log_[INSTANCE_ID]_[DATETIME].html
-        inherit_logToHtml: 1
-        inherit_htmlLogFileName: 1
+        inheritLogToHtml: 1
+        inheritHtmlLogFileName: 1
       cameras:
       - screenIdx: 4
         displayIdx: 0
@@ -255,13 +242,11 @@ MonoBehaviour:
         setMaxFov: 0
         allowHDR: 0
         allowMSAA: 0
-        setRenderingPath: 0
         renderingPath: 3
-        inherit_setMaxFov: 1
-        inherit_allowHDR: 1
-        inherit_allowMSAA: 1
-        inherit_setRenderingPath: 1
-        inherit_renderingPath: 1
+        inheritSetMaxFov: 1
+        inheritAllowHDR: 1
+        inheritAllowMSAA: 1
+        inheritRenderingPath: 1
       display:
         stereoscopyMode: 1
         eyeSeparation: 0.05
@@ -270,19 +255,19 @@ MonoBehaviour:
         setWindowPos: 0
         windowPos: {x: 0, y: 0}
         cursorVisible: 0
-        inherit_stereoscopyMode: 1
-        inherit_eyeSeparation: 1
-        inherit_swapEyes: 1
-        inherit_fullscreen: 1
-        inherit_setWindowPos: 1
-        inherit_windowPos: 1
-        inherit_cursorVisible: 1
+        inheritStereoscopyMode: 1
+        inheritEyeSeparation: 1
+        inheritSwapEyes: 1
+        inheritFullscreen: 1
+        inheritSetWindowPos: 1
+        inheritWindowPos: 1
+        inheritCursorVisible: 1
     - name: LEFT-TOP
       debug:
         logToHtml: 1
         htmlLogFileName: log_[INSTANCE_ID]_[DATETIME].html
-        inherit_logToHtml: 1
-        inherit_htmlLogFileName: 1
+        inheritLogToHtml: 1
+        inheritHtmlLogFileName: 1
       cameras:
       - screenIdx: 5
         displayIdx: 0
@@ -298,13 +283,11 @@ MonoBehaviour:
         setMaxFov: 0
         allowHDR: 0
         allowMSAA: 0
-        setRenderingPath: 0
         renderingPath: 3
-        inherit_setMaxFov: 1
-        inherit_allowHDR: 1
-        inherit_allowMSAA: 1
-        inherit_setRenderingPath: 1
-        inherit_renderingPath: 1
+        inheritSetMaxFov: 1
+        inheritAllowHDR: 1
+        inheritAllowMSAA: 1
+        inheritRenderingPath: 1
       display:
         stereoscopyMode: 1
         eyeSeparation: 0.05
@@ -313,19 +296,19 @@ MonoBehaviour:
         setWindowPos: 0
         windowPos: {x: 0, y: 0}
         cursorVisible: 0
-        inherit_stereoscopyMode: 1
-        inherit_eyeSeparation: 1
-        inherit_swapEyes: 1
-        inherit_fullscreen: 1
-        inherit_setWindowPos: 1
-        inherit_windowPos: 1
-        inherit_cursorVisible: 1
+        inheritStereoscopyMode: 1
+        inheritEyeSeparation: 1
+        inheritSwapEyes: 1
+        inheritFullscreen: 1
+        inheritSetWindowPos: 1
+        inheritWindowPos: 1
+        inheritCursorVisible: 1
     - name: LEFT-BOTTOM
       debug:
         logToHtml: 1
         htmlLogFileName: log_[INSTANCE_ID]_[DATETIME].html
-        inherit_logToHtml: 1
-        inherit_htmlLogFileName: 1
+        inheritLogToHtml: 1
+        inheritHtmlLogFileName: 1
       cameras:
       - screenIdx: 6
         displayIdx: 0
@@ -341,13 +324,11 @@ MonoBehaviour:
         setMaxFov: 0
         allowHDR: 0
         allowMSAA: 0
-        setRenderingPath: 0
         renderingPath: 3
-        inherit_setMaxFov: 1
-        inherit_allowHDR: 1
-        inherit_allowMSAA: 1
-        inherit_setRenderingPath: 1
-        inherit_renderingPath: 1
+        inheritSetMaxFov: 1
+        inheritAllowHDR: 1
+        inheritAllowMSAA: 1
+        inheritRenderingPath: 1
       display:
         stereoscopyMode: 1
         eyeSeparation: 0.05
@@ -356,19 +337,19 @@ MonoBehaviour:
         setWindowPos: 0
         windowPos: {x: 0, y: 0}
         cursorVisible: 0
-        inherit_stereoscopyMode: 1
-        inherit_eyeSeparation: 1
-        inherit_swapEyes: 1
-        inherit_fullscreen: 1
-        inherit_setWindowPos: 1
-        inherit_windowPos: 1
-        inherit_cursorVisible: 1
+        inheritStereoscopyMode: 1
+        inheritEyeSeparation: 1
+        inheritSwapEyes: 1
+        inheritFullscreen: 1
+        inheritSetWindowPos: 1
+        inheritWindowPos: 1
+        inheritCursorVisible: 1
     - name: BOTTOM-LEFT
       debug:
         logToHtml: 1
         htmlLogFileName: log_[INSTANCE_ID]_[DATETIME].html
-        inherit_logToHtml: 1
-        inherit_htmlLogFileName: 1
+        inheritLogToHtml: 1
+        inheritHtmlLogFileName: 1
       cameras:
       - screenIdx: 7
         displayIdx: 0
@@ -384,13 +365,11 @@ MonoBehaviour:
         setMaxFov: 0
         allowHDR: 0
         allowMSAA: 0
-        setRenderingPath: 0
         renderingPath: 3
-        inherit_setMaxFov: 1
-        inherit_allowHDR: 1
-        inherit_allowMSAA: 1
-        inherit_setRenderingPath: 1
-        inherit_renderingPath: 1
+        inheritSetMaxFov: 1
+        inheritAllowHDR: 1
+        inheritAllowMSAA: 1
+        inheritRenderingPath: 1
       display:
         stereoscopyMode: 1
         eyeSeparation: 0.05
@@ -399,19 +378,19 @@ MonoBehaviour:
         setWindowPos: 0
         windowPos: {x: 0, y: 0}
         cursorVisible: 0
-        inherit_stereoscopyMode: 1
-        inherit_eyeSeparation: 1
-        inherit_swapEyes: 1
-        inherit_fullscreen: 1
-        inherit_setWindowPos: 1
-        inherit_windowPos: 1
-        inherit_cursorVisible: 1
+        inheritStereoscopyMode: 1
+        inheritEyeSeparation: 1
+        inheritSwapEyes: 1
+        inheritFullscreen: 1
+        inheritSetWindowPos: 1
+        inheritWindowPos: 1
+        inheritCursorVisible: 1
     - name: BOTTOM-RIGHT
       debug:
         logToHtml: 1
         htmlLogFileName: log_[INSTANCE_ID]_[DATETIME].html
-        inherit_logToHtml: 1
-        inherit_htmlLogFileName: 1
+        inheritLogToHtml: 1
+        inheritHtmlLogFileName: 1
       cameras:
       - screenIdx: 8
         displayIdx: 0
@@ -427,13 +406,11 @@ MonoBehaviour:
         setMaxFov: 0
         allowHDR: 0
         allowMSAA: 0
-        setRenderingPath: 0
         renderingPath: 3
-        inherit_setMaxFov: 1
-        inherit_allowHDR: 1
-        inherit_allowMSAA: 1
-        inherit_setRenderingPath: 1
-        inherit_renderingPath: 1
+        inheritSetMaxFov: 1
+        inheritAllowHDR: 1
+        inheritAllowMSAA: 1
+        inheritRenderingPath: 1
       display:
         stereoscopyMode: 1
         eyeSeparation: 0.05
@@ -442,19 +419,19 @@ MonoBehaviour:
         setWindowPos: 0
         windowPos: {x: 0, y: 0}
         cursorVisible: 0
-        inherit_stereoscopyMode: 1
-        inherit_eyeSeparation: 1
-        inherit_swapEyes: 1
-        inherit_fullscreen: 1
-        inherit_setWindowPos: 1
-        inherit_windowPos: 1
-        inherit_cursorVisible: 1
+        inheritStereoscopyMode: 1
+        inheritEyeSeparation: 1
+        inheritSwapEyes: 1
+        inheritFullscreen: 1
+        inheritSetWindowPos: 1
+        inheritWindowPos: 1
+        inheritCursorVisible: 1
     - name: TOP-LEFT
       debug:
         logToHtml: 1
         htmlLogFileName: log_[INSTANCE_ID]_[DATETIME].html
-        inherit_logToHtml: 1
-        inherit_htmlLogFileName: 1
+        inheritLogToHtml: 1
+        inheritHtmlLogFileName: 1
       cameras:
       - screenIdx: 9
         displayIdx: 0
@@ -470,13 +447,11 @@ MonoBehaviour:
         setMaxFov: 0
         allowHDR: 0
         allowMSAA: 0
-        setRenderingPath: 0
         renderingPath: 3
-        inherit_setMaxFov: 1
-        inherit_allowHDR: 1
-        inherit_allowMSAA: 1
-        inherit_setRenderingPath: 1
-        inherit_renderingPath: 1
+        inheritSetMaxFov: 1
+        inheritAllowHDR: 1
+        inheritAllowMSAA: 1
+        inheritRenderingPath: 1
       display:
         stereoscopyMode: 1
         eyeSeparation: 0.05
@@ -485,19 +460,19 @@ MonoBehaviour:
         setWindowPos: 0
         windowPos: {x: 0, y: 0}
         cursorVisible: 0
-        inherit_stereoscopyMode: 1
-        inherit_eyeSeparation: 1
-        inherit_swapEyes: 1
-        inherit_fullscreen: 1
-        inherit_setWindowPos: 1
-        inherit_windowPos: 1
-        inherit_cursorVisible: 1
+        inheritStereoscopyMode: 1
+        inheritEyeSeparation: 1
+        inheritSwapEyes: 1
+        inheritFullscreen: 1
+        inheritSetWindowPos: 1
+        inheritWindowPos: 1
+        inheritCursorVisible: 1
     - name: TOP-RIGHT
       debug:
         logToHtml: 1
         htmlLogFileName: log_[INSTANCE_ID]_[DATETIME].html
-        inherit_logToHtml: 1
-        inherit_htmlLogFileName: 1
+        inheritLogToHtml: 1
+        inheritHtmlLogFileName: 1
       cameras:
       - screenIdx: 10
         displayIdx: 0
@@ -513,13 +488,11 @@ MonoBehaviour:
         setMaxFov: 0
         allowHDR: 0
         allowMSAA: 0
-        setRenderingPath: 0
         renderingPath: 3
-        inherit_setMaxFov: 1
-        inherit_allowHDR: 1
-        inherit_allowMSAA: 1
-        inherit_setRenderingPath: 1
-        inherit_renderingPath: 1
+        inheritSetMaxFov: 1
+        inheritAllowHDR: 1
+        inheritAllowMSAA: 1
+        inheritRenderingPath: 1
       display:
         stereoscopyMode: 1
         eyeSeparation: 0.05
@@ -528,19 +501,19 @@ MonoBehaviour:
         setWindowPos: 0
         windowPos: {x: 0, y: 0}
         cursorVisible: 0
-        inherit_stereoscopyMode: 1
-        inherit_eyeSeparation: 1
-        inherit_swapEyes: 1
-        inherit_fullscreen: 1
-        inherit_setWindowPos: 1
-        inherit_windowPos: 1
-        inherit_cursorVisible: 1
+        inheritStereoscopyMode: 1
+        inheritEyeSeparation: 1
+        inheritSwapEyes: 1
+        inheritFullscreen: 1
+        inheritSetWindowPos: 1
+        inheritWindowPos: 1
+        inheritCursorVisible: 1
     - name: DOOR-TOP
       debug:
         logToHtml: 1
         htmlLogFileName: log_[INSTANCE_ID]_[DATETIME].html
-        inherit_logToHtml: 1
-        inherit_htmlLogFileName: 1
+        inheritLogToHtml: 1
+        inheritHtmlLogFileName: 1
       cameras:
       - screenIdx: 11
         displayIdx: 0
@@ -556,13 +529,11 @@ MonoBehaviour:
         setMaxFov: 0
         allowHDR: 0
         allowMSAA: 0
-        setRenderingPath: 0
         renderingPath: 3
-        inherit_setMaxFov: 1
-        inherit_allowHDR: 1
-        inherit_allowMSAA: 1
-        inherit_setRenderingPath: 1
-        inherit_renderingPath: 1
+        inheritSetMaxFov: 1
+        inheritAllowHDR: 1
+        inheritAllowMSAA: 1
+        inheritRenderingPath: 1
       display:
         stereoscopyMode: 1
         eyeSeparation: 0.05
@@ -571,19 +542,19 @@ MonoBehaviour:
         setWindowPos: 0
         windowPos: {x: 0, y: 0}
         cursorVisible: 0
-        inherit_stereoscopyMode: 1
-        inherit_eyeSeparation: 1
-        inherit_swapEyes: 1
-        inherit_fullscreen: 1
-        inherit_setWindowPos: 1
-        inherit_windowPos: 1
-        inherit_cursorVisible: 1
+        inheritStereoscopyMode: 1
+        inheritEyeSeparation: 1
+        inheritSwapEyes: 1
+        inheritFullscreen: 1
+        inheritSetWindowPos: 1
+        inheritWindowPos: 1
+        inheritCursorVisible: 1
     - name: DOOR-BOTTOM
       debug:
         logToHtml: 1
         htmlLogFileName: log_[INSTANCE_ID]_[DATETIME].html
-        inherit_logToHtml: 1
-        inherit_htmlLogFileName: 1
+        inheritLogToHtml: 1
+        inheritHtmlLogFileName: 1
       cameras:
       - screenIdx: 12
         displayIdx: 0
@@ -599,13 +570,11 @@ MonoBehaviour:
         setMaxFov: 0
         allowHDR: 0
         allowMSAA: 0
-        setRenderingPath: 0
         renderingPath: 3
-        inherit_setMaxFov: 1
-        inherit_allowHDR: 1
-        inherit_allowMSAA: 1
-        inherit_setRenderingPath: 1
-        inherit_renderingPath: 1
+        inheritSetMaxFov: 1
+        inheritAllowHDR: 1
+        inheritAllowMSAA: 1
+        inheritRenderingPath: 1
       display:
         stereoscopyMode: 1
         eyeSeparation: 0.05
@@ -614,13 +583,13 @@ MonoBehaviour:
         setWindowPos: 0
         windowPos: {x: 0, y: 0}
         cursorVisible: 0
-        inherit_stereoscopyMode: 1
-        inherit_eyeSeparation: 1
-        inherit_swapEyes: 1
-        inherit_fullscreen: 1
-        inherit_setWindowPos: 1
-        inherit_windowPos: 1
-        inherit_cursorVisible: 1
+        inheritStereoscopyMode: 1
+        inheritEyeSeparation: 1
+        inheritSwapEyes: 1
+        inheritFullscreen: 1
+        inheritSetWindowPos: 1
+        inheritWindowPos: 1
+        inheritCursorVisible: 1
     pointsOfView:
     - poseIdx: 0
     - poseIdx: 1
@@ -745,5 +714,4 @@ MonoBehaviour:
     setMaxFov: 0
     allowHDR: 0
     allowMSAA: 0
-    setRenderingPath: 0
     renderingPath: 3

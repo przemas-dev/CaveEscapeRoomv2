@@ -30,7 +30,6 @@ MonoBehaviour:
       sendRate: 60
       quitOnDisconnection: 1
       maxConnectionTries: 5
-      maxConnections: 32
     input:
       posesStartingPosition: {x: 0, y: 1.75, z: 0}
       posesStartingRotation: {x: 0, y: 0, z: 0}
@@ -38,7 +37,7 @@ MonoBehaviour:
       - name: SMARTTRACK miniCave
         enabled: 1
         startMeasurement: 0
-        controllerIP: 127.0.0.1
+        controllerIP: 1270.0.1
         dataPort: 5000
         offsetFromOrigin: {x: 0, y: 1.65, z: 0}
         bodies:
@@ -57,10 +56,8 @@ MonoBehaviour:
         - name: Flystick2 00612
           positionCorrection: {x: 0, y: 0, z: 0}
           rotationCorrection: {x: 0, y: 0, z: 0}
-        hands: []
         posesListStartingIdx: 0
         joysitckThreshold: 0.01
-      arthumans: []
     instances:
     - name: FRONT_SYM
       debug:

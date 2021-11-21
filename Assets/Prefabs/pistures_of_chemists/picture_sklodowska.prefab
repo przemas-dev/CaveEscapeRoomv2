@@ -55,6 +55,7 @@ GameObject:
   - component: {fileID: 4623392227606684}
   - component: {fileID: 33644708931711152}
   - component: {fileID: 23113896523988850}
+  - component: {fileID: 65372987381373352}
   m_Layer: 0
   m_Name: picture_sklodowska
   m_TagString: Untagged
@@ -69,7 +70,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1651394186461338}
   m_LocalRotation: {x: 0, y: 0.7069834, z: 0.7072302, w: 0}
-  m_LocalPosition: {x: -1.69, y: 1.9694618, z: 0.36903626}
+  m_LocalPosition: {x: -1.69, y: 1.8, z: 0}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_Children:
   - {fileID: 4997017241616156}
@@ -229,3 +230,15 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1626658289363998}
   m_Mesh: {fileID: 4300004, guid: cee4409b8a2ddaa4ea433a55b818b257, type: 3}
+--- !u!65 &65372987381373352
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1651394186461338}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.0002000001, y: 0.0030000014, z: 0.004000001}
+  m_Center: {x: 0, y: -2.3283067e-10, z: 4.1633363e-17}

@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4595502988775390}
   - component: {fileID: 33928684831590912}
   - component: {fileID: 23085264694652318}
+  - component: {fileID: 65060459569458264}
   m_Layer: 0
   m_Name: picture_zigimondy
   m_TagString: Untagged
@@ -82,7 +83,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1115170403366192}
   m_LocalRotation: {x: 0, y: 0.7069834, z: 0.7072302, w: 0}
-  m_LocalPosition: {x: -1.69, y: 2.4197335, z: 0.45563322}
+  m_LocalPosition: {x: -1.69, y: 1.8, z: -1}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_Children:
   - {fileID: 4329680142705056}
@@ -229,3 +230,15 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1115170403366192}
   m_Mesh: {fileID: 4300000, guid: cee4409b8a2ddaa4ea433a55b818b257, type: 3}
+--- !u!65 &65060459569458264
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1115170403366192}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.0002000001, y: 0.0030000014, z: 0.004000001}
+  m_Center: {x: 0, y: -2.3283067e-10, z: 4.1633363e-17}

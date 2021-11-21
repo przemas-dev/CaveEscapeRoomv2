@@ -25,8 +25,8 @@ public class FlystickJoystick_InputExample : MonoBehaviour
 
     void FixedUpdate()
     {
-        float x = Lzwp.input.flysticks[flystickIdx].joysticks[0];  // horizontal
-        float y = Lzwp.input.flysticks[flystickIdx].joysticks[1];  // vertical
+        float x = Lzwp.input.flysticks[flystickIdx].joysticks[0];
+        float y = Lzwp.input.flysticks[flystickIdx].joysticks[1];
 
         label.text = string.Format("{0}, {1}", x.ToString("F3"), y.ToString("F3"));
 

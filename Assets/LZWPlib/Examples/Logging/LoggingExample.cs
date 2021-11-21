@@ -25,7 +25,7 @@ public class LoggingExample : MonoBehaviour
         catch (Exception ex)
         {
             Lzwp.debug.Exception(ex);
-            Lzwp.debug.ExceptionWithContext(this, ex);
+            Lzwp.debug.ExceptionWithContext(ex, this);
         }
     }
 }

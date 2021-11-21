@@ -15,12 +15,12 @@ MonoBehaviour:
   aliases: []
   tags: []
   authors: []
-  shortDescription: 
-  longDescription: 
+  descriptionShort: 
+  descriptionLong: 
   tools:
   - Unity 2018.1.9f2
-  LzwpLibVersion: 2.9 (mock)
-  appGUID: 24CA6DE8003E405790CE454A8272DE0D
+  LzwpLibVersion: 2.8
+  appGUID: 6E2076EBEC754B2EB5C14650BBDE87EC
   buildGUID: 
   defaultConfig:
     obstacleWallWarningScaleMultiplier: 1

@@ -37,7 +37,7 @@ public class UIManager : MonoBehaviour
 
     private bool IsPickable(GameObject gameObject)
     {
-        return gameObject.GetComponent<IPickable>() != null;
+        return gameObject.GetComponent<IGrabable>() != null;
     }
 
 

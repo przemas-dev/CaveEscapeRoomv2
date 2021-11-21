@@ -8,8 +8,7 @@ public class TrackedObject : MonoBehaviour
     {
         Pose,
         Flystick,
-        Glasses,
-        Hand
+        Glasses
     }
 
     public TrackedObjectType trackedType = TrackedObjectType.Flystick;
@@ -75,11 +74,6 @@ public class TrackedObject : MonoBehaviour
         {
             if (idx < Lzwp.input.glasses.Count)
                 return Lzwp.input.glasses[idx];
-        }
-        else if (trackedType == TrackedObjectType.Hand)
-        {
-            if (idx < Lzwp.input.hands.Count)
-                return Lzwp.input.hands[idx].pose;
         }
 
         return new LzwpPose();
