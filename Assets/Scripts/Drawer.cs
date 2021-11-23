@@ -15,6 +15,9 @@ public class Drawer : MonoBehaviour
 	private Vector3 _maxPos;
 	void Start ()
 	{
+		var rigidbody = GetComponent<Rigidbody>();
+		rigidbody.centerOfMass = transform.localPosition;
+		rigidbody.inertiaTensorRotation = Quaternion.identity;
 		_startingPos = transform.position;
 		switch (Direction)
 		{
