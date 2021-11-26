@@ -34,8 +34,10 @@ public class Interactions : MonoBehaviour {
 
     private void PressedFire()
     {
-        _observedObject = GetObservedObject(); 
+        _observedObject = GetObservedObject();
         var grabable = Grabable(_observedObject);
+        var interactable = Interactable(_observedObject);
+        if (interactable != null) interactable.Interact();
         if (grabable == null) return;
         grabable.Grab(FlyStickObject);
         PlayerState = PlayerState.Carrying;
@@ -77,5 +79,9 @@ public class Interactions : MonoBehaviour {
     private IGrabable Grabable(GameObject gameObject)
     {
         return gameObject != null ? gameObject.GetComponent<IGrabable>() : null;
+    }
+    private IInteractable Interactable(GameObject gameObject)
+    {
+        return gameObject != null ? gameObject.GetComponent<IInteractable>() : null;
     }
 }
