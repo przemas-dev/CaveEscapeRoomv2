@@ -7,11 +7,11 @@ public class Grabable : MonoBehaviour, IGrabable
     private bool _isCarried=false;
     private Rigidbody _rigidbody;
     private GameObject _grabber;
-    private float _carryDistance = 1.0f;
+    public float _carryDistance = 1.0f;
     
     public float CarrySpeed = 15.0f;
     // Start is called before the first frame update
-    void Start()
+    protected void Start()
     {
         _rigidbody = GetComponent<Rigidbody>();
         IsGrabbed = false;
@@ -24,7 +24,8 @@ public class Grabable : MonoBehaviour, IGrabable
     }
 
     public bool IsGrabbed { get; set; }
-    public void Grab(GameObject grabber)
+
+    public virtual void Grab(GameObject grabber)
     {
         IsGrabbed = true;
         _grabber = grabber;
@@ -39,7 +40,7 @@ public class Grabable : MonoBehaviour, IGrabable
             CarrySpeed;
     }
     
-    public void Release()
+    public virtual void Release()
     {
         IsGrabbed = false;
         _rigidbody.useGravity = true;

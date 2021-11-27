@@ -9,11 +9,10 @@ public class HintController : MonoBehaviour, IInteractable
     private float timer = 0.0f;
     private bool hintOnScreen = false;
 
-    // Start is called before the first frame update
+
     void Start()
     {
         rend = GetComponent<MeshRenderer>();
-        rend.enabled = true;
         rend.material = materials[0];
     }
 
@@ -42,8 +41,10 @@ public class HintController : MonoBehaviour, IInteractable
         return false;
     }
 
-    private void ChangeMaterial(Material material)
+    public void ChangeMaterial(Material material)
     {
         rend.material = material;
     }
+
+
 }

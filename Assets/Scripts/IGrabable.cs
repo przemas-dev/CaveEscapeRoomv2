@@ -6,7 +6,6 @@ using UnityEngine;
 
 interface IGrabable
 { 
-    
     bool IsGrabbed { get; set; }
     void Grab(GameObject grabber);
     void Release();
