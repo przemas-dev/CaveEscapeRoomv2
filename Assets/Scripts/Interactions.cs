@@ -78,10 +78,12 @@ public class Interactions : MonoBehaviour {
     }
     private IGrabable Grabable(GameObject gameObject)
     {
-        return gameObject != null ? gameObject.GetComponent<IGrabable>() : null;
+        var grabable = gameObject.GetComponent<IGrabable>();
+        return grabable != null && ((MonoBehaviour) grabable).enabled ? grabable : null;
     }
     private IInteractable Interactable(GameObject gameObject)
     {
-        return gameObject != null ? gameObject.GetComponent<IInteractable>() : null;
+        var interactable = gameObject.GetComponent<IInteractable>();
+        return interactable != null && ((MonoBehaviour) interactable).enabled ? interactable : null;
     }
 }
