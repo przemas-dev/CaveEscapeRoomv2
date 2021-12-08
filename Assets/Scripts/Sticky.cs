@@ -36,6 +36,7 @@ public class Sticky : MonoBehaviour
 			var rigidbody = other.rigidbody;
 			rigidbody.useGravity = false;
 			rigidbody.velocity = new Vector3(0.0f, 0.0f, 0.0f);
+			rigidbody.angularVelocity = new Vector3(0.0f, 0.0f, 0.0f);
 		}
 	}
 	
