@@ -6,8 +6,10 @@ public class ClockController : MonoBehaviour {
 
     public TextMesh TextMesh;
     private float timer = 0.0f;
+    private float timerCode = 0.0f;
     private int seconds;
     private int minutes = 59;
+    private bool code = false;
 
 
 
@@ -21,15 +23,37 @@ public class ClockController : MonoBehaviour {
     {
         timer += Time.deltaTime;
 
+        if (code)
+        {
+            timerCode += Time.deltaTime;
+
+            showCode();
+            if(timerCode>5)
+            {
+                timerCode = 0;
+                code = false;
+            }
+        }
+        else
+        {
+            changeTime();
+
+        }
+
+
+    }
+
+    public void changeTime()
+    {
         seconds = 59 - (int)timer;
 
-        if(timer>60)
+        if (timer > 60)
         {
             timer = 0;
             minutes -= 1;
         }
 
-        if (seconds < 10) 
+        if (seconds < 10)
         {
             TextMesh.text = minutes.ToString() + ":0" + seconds.ToString();
         }
@@ -37,6 +61,12 @@ public class ClockController : MonoBehaviour {
         {
             TextMesh.text = minutes.ToString() + ":" + seconds.ToString();
         }
+    }
+
+    public void showCode()
+    {
+        if (!code) code = true;
+        TextMesh.text = "21:37";
 
     }
 }
