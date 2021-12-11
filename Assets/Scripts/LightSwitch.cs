@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LightOff : MonoBehaviour, IInteractable
+public class LightSwitch : MonoBehaviour, IInteractable
 {
 
     public Material[] materials;
@@ -11,6 +11,9 @@ public class LightOff : MonoBehaviour, IInteractable
     public GameObject plane;
     public GameObject switch_up;
     public GameObject switch_down;
+    public AudioClip ClickSound;
+    private AudioSource _audioSource;
+
 
     private bool isOn = true;
 
@@ -18,6 +21,7 @@ public class LightOff : MonoBehaviour, IInteractable
 	void Start ()
     {
         rend = plane.gameObject.GetComponent<MeshRenderer>();
+        _audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -27,6 +31,9 @@ public class LightOff : MonoBehaviour, IInteractable
 
     public bool Interact()
     {
+        _audioSource.clip = ClickSound;
+        _audioSource.Play();
+
         isOn = !isOn;
         light.gameObject.SetActive(isOn);
         if (isOn)

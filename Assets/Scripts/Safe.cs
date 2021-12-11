@@ -14,7 +14,7 @@ public class Safe : MonoBehaviour
 	public AudioClip UnlockSound;
 	public GameObject SafeDoor;
 	[Tooltip("Value between 0 and 9999")] 
-	public int SafeCode = 1917;
+	public int SafeCode = 1911;
 
 	private string _screenText = "";
 	private bool _isOpen = false;
