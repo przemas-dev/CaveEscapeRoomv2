@@ -6,29 +6,39 @@ public class PhoneController : Grabable
 {
     public Material[] materials;
     public MeshRenderer screenMesh;
+    private NetworkView nv;
+
 
     // Use this for initialization
     void Start()
     {
         base.Start();
-        ChangeMaterial(materials[0]);
+        nv = GetComponent<NetworkView>();
+        ChangeMaterial(0);
     }
 
 
     public override void Grab(GameObject grabber)
     {
         base.Grab(grabber);
-        ChangeMaterial(materials[1]);
+        ChangeMaterial(1);
     }
 
     public override void Release()
     {
         base.Release();
-        ChangeMaterial(materials[0]);
+        ChangeMaterial(0);
     }
 
-    public void ChangeMaterial(Material material)
+    public void ChangeMaterial(int index)
     {
-        screenMesh.material = material;
+        screenMesh.material = materials[index];
+        nv.RPC("ChangeMaterialRPC", RPCMode.OthersBuffered, index);
+    }
+
+    [RPC]
+    public void ChangeMaterialRPC(int index)
+    {
+        screenMesh.material = materials[index];
     }
 }

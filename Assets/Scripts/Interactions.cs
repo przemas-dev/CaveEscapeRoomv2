@@ -16,20 +16,27 @@ public class Interactions : MonoBehaviour {
     private IGrabable _grabbedObject = null;
     private NetworkView nv;
     private GameObject _observedObject;
-    
+    private Rigidbody rigidbody;
     
     // Use this for initialization
     void Start ()
     {
         nv = GetComponent<NetworkView>();
-        //Lzwp.AddAfterInitializedAction(Init);
+
+        Lzwp.AddAfterInitializedAction(Init);
     }
 
     private void Init()
     {
         Lzwp.input.flysticks[0].GetButton(LzwpInput.Flystick.ButtonID.Fire).OnPress += PressedFire;
         Lzwp.input.flysticks[0].GetButton(LzwpInput.Flystick.ButtonID.Fire).OnRelease += ReleasedFire;
-
+        if (!Lzwp.sync.isMaster)
+        {
+            foreach (var rg in FindObjectsOfType<Rigidbody>())
+            {
+                Destroy(rg);
+            }
+        }
     }
 
     private void PressedFire()
@@ -40,6 +47,7 @@ public class Interactions : MonoBehaviour {
         if (interactable != null) interactable.Interact();
         if (grabable == null) return;
         grabable.Grab(FlyStickObject);
+        
         PlayerState = PlayerState.Carrying;
         _grabbedObject = grabable;
     }
@@ -51,7 +59,7 @@ public class Interactions : MonoBehaviour {
     }
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.L))
         {
             if(PlayerState==PlayerState.Carrying)
                 ReleasedFire();

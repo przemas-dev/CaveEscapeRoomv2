@@ -18,6 +18,8 @@ public class Safe : MonoBehaviour
 
 	private string _screenText = "";
 	private bool _isOpen = false;
+
+    private NetworkView nv;
 	
 	// Use this for initialization
 	void Start ()
@@ -29,6 +31,7 @@ public class Safe : MonoBehaviour
 	{
 		SafeDoor.GetComponent<Locker>().enabled = false;
 		SafeDoor.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
+        nv = GetComponent<NetworkView>();
 	}
 
 	// Update is called once per frame
@@ -79,8 +82,15 @@ public class Safe : MonoBehaviour
 	
 	private void UpdateScreen()
 	{
-		ScreenText.text = _screenText;
+        nv.RPC("UpdateScreenRPC", RPCMode.OthersBuffered, _screenText);
+        ScreenText.text = _screenText;
 	}
+
+    [RPC]
+    private void UpdateScreenRPC(string text)
+    {
+        ScreenText.text = text;
+    }
 	
 	private void AccessDenied()
 	{

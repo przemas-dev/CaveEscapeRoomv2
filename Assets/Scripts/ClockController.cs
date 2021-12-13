@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ClockController : MonoBehaviour {
+public class ClockController : MonoBehaviour,ISwitchable {
 
     public TextMesh TextMesh;
     private float timer = 0.0f;
@@ -10,37 +10,38 @@ public class ClockController : MonoBehaviour {
     private int seconds;
     private int minutes = 59;
     private bool code = false;
-
+    private NetworkView nv;
 
 
     // Use this for initialization
-    void Start () {
+    void Start ()
+    {
+        nv = GetComponent<NetworkView>();
         TextMesh.text = "60:00";
 	}
 	
 	// Update is called once per frame
 	void Update ()
     {
-        timer += Time.deltaTime;
-
-        if (code)
+        if(Lzwp.sync.isMaster)
         {
-            timerCode += Time.deltaTime;
+            timer += Time.deltaTime;
 
-            showCode();
-            if(timerCode>5)
+            if (code)
             {
-                timerCode = 0;
-                code = false;
+                timerCode += Time.deltaTime;
+
+                if (timerCode > 5)
+                {
+                    timerCode = 0;
+                    code = false;
+                }
+            }
+            else
+            {
+                changeTime();
             }
         }
-        else
-        {
-            changeTime();
-
-        }
-
-
     }
 
     public void changeTime()
@@ -55,18 +56,35 @@ public class ClockController : MonoBehaviour {
 
         if (seconds < 10)
         {
-            TextMesh.text = minutes.ToString() + ":0" + seconds.ToString();
+            SetText(minutes.ToString() + ":0" + seconds.ToString());
+            //TextMesh.text = minutes.ToString() + ":0" + seconds.ToString();
         }
         else
         {
-            TextMesh.text = minutes.ToString() + ":" + seconds.ToString();
+            SetText(minutes.ToString() + ":" + seconds.ToString());
+            //TextMesh.text = minutes.ToString() + ":" + seconds.ToString();
         }
     }
 
-    public void showCode()
+    public void showCode(string text)
     {
         if (!code) code = true;
-        TextMesh.text = "21:37";
+        SetText(text);
+    }
 
+    private void SetText(string text)
+    {
+        TextMesh.text = text;
+        nv.RPC("SetTextRPC", RPCMode.OthersBuffered, text);
+    }
+    [RPC]
+    private void SetTextRPC(string text)
+    {
+        TextMesh.text = text;
+    }
+
+    public void Switch()
+    {
+        showCode("95:00");
     }
 }

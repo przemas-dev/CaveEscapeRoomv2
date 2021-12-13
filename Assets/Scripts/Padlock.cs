@@ -14,9 +14,11 @@ public class Padlock : MonoBehaviour {
 	private bool _isOpened = false;
 	private int[] _digits = new int[3];
 	private AudioSource _audioSource;
+    private NetworkView nv;
 	
 	void Start()
 	{
+        nv = GetComponent<NetworkView>();
 		_audioSource = GetComponent<AudioSource>();
 		if (RandomDiskStartPos)
 		{
@@ -30,7 +32,7 @@ public class Padlock : MonoBehaviour {
 	private void SetDiskNumber(int diskNumber, int value, bool playSound = true)
 	{
 		_digits[diskNumber] = value;
-		SetDiskRotation(NumberDisks[diskNumber],value);
+        SetDiskRotation(diskNumber, value);
 		if (playSound) PlaySound();
 	}
 	// Update is called once per frame
@@ -38,16 +40,24 @@ public class Padlock : MonoBehaviour {
 		
 	}
 
-	private void SetDiskRotation(Transform disk, int value)
+	private void SetDiskRotation(int diskNumber, int value)
 	{
-		disk.localRotation = Quaternion.Euler(0.0f, 0.0f, value * 36.0f);
+        nv.RPC("SetDiskRotationRPC", RPCMode.OthersBuffered, diskNumber, value);
+        NumberDisks[diskNumber].localRotation = Quaternion.Euler(0.0f, 0.0f, value * 36.0f);
 	}
-	
-	public void SpinDiskUp(int diskNumber)
+    [RPC]
+    private void SetDiskRotationRPC(int diskNumber, int value)
+    {
+        NumberDisks[diskNumber].localRotation = Quaternion.Euler(0.0f, 0.0f, value * 36.0f);
+    }
+
+
+
+    public void SpinDiskUp(int diskNumber)
 	{
 		if (_isOpened) return;
 		_digits[diskNumber] = (_digits[diskNumber] + 1) % 10;
-		SetDiskRotation(NumberDisks[diskNumber],_digits[diskNumber]);
+		SetDiskRotation(diskNumber,_digits[diskNumber]);
 		PlaySound();
 		//TODO: animacja 
 		CheckNumbers();
@@ -57,7 +67,7 @@ public class Padlock : MonoBehaviour {
 	{
 		if (_isOpened) return;
 		_digits[diskNumber] = _digits[diskNumber] == 0 ? 9 : _digits[diskNumber] - 1;
-		SetDiskRotation(NumberDisks[diskNumber],_digits[diskNumber]);
+		SetDiskRotation(diskNumber,_digits[diskNumber]);
 		PlaySound();
 		//TODO animacja
 		CheckNumbers();

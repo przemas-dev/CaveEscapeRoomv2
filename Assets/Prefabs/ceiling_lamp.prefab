@@ -38,6 +38,7 @@ GameObject:
   - component: {fileID: 4648592974489908}
   - component: {fileID: 33489264502547126}
   - component: {fileID: 23177573656349422}
+  - component: {fileID: 114383358649225334}
   - component: {fileID: 65178232007467628}
   m_Layer: 0
   m_Name: ceiling_lamp
@@ -308,3 +309,18 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &114383358649225334
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1227915802839076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4628c863640bc0543b4806b543f7af6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Light: {fileID: 108905926616511842}
+  LightMesh: {fileID: 23477046590259154}
+  MaterialOn: {fileID: 2100000, guid: 66566696ef3a8d24c9131a2e6610c5e4, type: 2}
+  MaterialOff: {fileID: 2100000, guid: 72a281af533d8df41a2537bb5883d82b, type: 2}

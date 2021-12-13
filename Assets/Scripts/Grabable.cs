@@ -32,6 +32,7 @@ public class Grabable : MonoBehaviour, IGrabable
         _grabber = grabber;
         _rigidbody.useGravity = false;
         _rigidbody.angularDrag = 10.0f;
+
     }
 
     private void Carry()

@@ -59,7 +59,7 @@ GameObject:
   - component: {fileID: 65662945081088526}
   - component: {fileID: 114258741929759566}
   m_Layer: 0
-  m_Name: antidotum 1
+  m_Name: antidotum
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

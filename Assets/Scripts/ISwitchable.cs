@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TriggerCodeOnClock : Switch
-{
-
+public interface ISwitchable{
+    void Switch();
 }
