@@ -273,7 +273,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe5de6290c41fbc4ca5ada66feb83f27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _carryDistance: 1
   CarrySpeed: 15
 --- !u!148 &67861605
 NetworkView:
@@ -682,7 +681,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe5de6290c41fbc4ca5ada66feb83f27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _carryDistance: 1
   CarrySpeed: 15
 --- !u!54 &119019091
 Rigidbody:
@@ -1386,7 +1384,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe5de6290c41fbc4ca5ada66feb83f27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _carryDistance: 1
   CarrySpeed: 15
 --- !u!54 &306706511
 Rigidbody:
@@ -1906,6 +1903,78 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.000060000046, y: 0.000060000046, z: 0.0011}
   m_Center: {x: 0, y: 9.313226e-10, z: 9.313226e-10}
+--- !u!1 &402030968
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 402030969}
+  - component: {fileID: 402030972}
+  - component: {fileID: 402030971}
+  m_Layer: 0
+  m_Name: Cylinder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &402030969
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 402030968}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: -0, z: 0.995}
+  m_LocalScale: {x: 0.003, y: 1, z: 0.003}
+  m_Children: []
+  m_Father: {fileID: 1858074375}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!23 &402030971
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 402030968}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
+  m_Materials:
+  - {fileID: 2100000, guid: 29505aa80c51b9c4cb89e17648501721, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &402030972
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 402030968}
+  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &410684452 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100058, guid: 3fbe4b2983f79ec45b3413fe6ec7336b, type: 3}
@@ -2711,7 +2780,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe5de6290c41fbc4ca5ada66feb83f27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _carryDistance: 1
   CarrySpeed: 15
 --- !u!54 &642227128
 Rigidbody:
@@ -3082,7 +3150,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe5de6290c41fbc4ca5ada66feb83f27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _carryDistance: 1
   CarrySpeed: 15
 --- !u!54 &716970854
 Rigidbody:
@@ -4305,7 +4372,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe5de6290c41fbc4ca5ada66feb83f27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _carryDistance: 1
   CarrySpeed: 15
 --- !u!54 &1136402209
 Rigidbody:
@@ -4477,7 +4543,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe5de6290c41fbc4ca5ada66feb83f27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _carryDistance: 1
   CarrySpeed: 15
 --- !u!54 &1191407201
 Rigidbody:
@@ -4674,7 +4739,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe5de6290c41fbc4ca5ada66feb83f27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _carryDistance: 1
   CarrySpeed: 15
 --- !u!54 &1225680420
 Rigidbody:
@@ -4807,7 +4871,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe5de6290c41fbc4ca5ada66feb83f27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _carryDistance: 1
   CarrySpeed: 15
 --- !u!54 &1290536016
 Rigidbody:
@@ -4885,7 +4948,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe5de6290c41fbc4ca5ada66feb83f27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _carryDistance: 1
   CarrySpeed: 15
 --- !u!54 &1301096558
 Rigidbody:
@@ -5828,7 +5890,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe5de6290c41fbc4ca5ada66feb83f27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _carryDistance: 1
   CarrySpeed: 15
 --- !u!148 &1558775658
 NetworkView:
@@ -7648,7 +7709,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe5de6290c41fbc4ca5ada66feb83f27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _carryDistance: 1
   CarrySpeed: 15
 --- !u!54 &1718373093
 Rigidbody:
@@ -7892,9 +7952,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32b5d9c3fd8d3824fa295c41b51a2d81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CarrySpeed: 15
   InteractionRange: 2
-  CarryDistance: 1
   FlyStickObject: {fileID: 1858074373}
 --- !u!1 &1909834849 stripped
 GameObject:
@@ -8673,7 +8731,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe5de6290c41fbc4ca5ada66feb83f27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _carryDistance: 1
   CarrySpeed: 15
 --- !u!136 &2053798717
 CapsuleCollider:

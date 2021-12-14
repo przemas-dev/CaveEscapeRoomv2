@@ -6,12 +6,10 @@ using UnityEngine.UI;
 
 public class Interactions : MonoBehaviour {
 
-
-    public float CarrySpeed = 15.0f;
+    
     public float InteractionRange = 2.0f;
     private PlayerState PlayerState { get; set; }
-
-    public float CarryDistance = 1.0f;
+    
     public GameObject FlyStickObject;
     private IGrabable _grabbedObject = null;
     private NetworkView nv;

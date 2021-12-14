@@ -8,7 +8,8 @@ public class Grabable : MonoBehaviour, IGrabable
     private bool _isCarried=false;
     private Rigidbody _rigidbody;
     private GameObject _grabber;
-    public float _carryDistance = 1.0f;
+    private float _carryDistance;
+    private Quaternion _rotationFactor;
     
     public float CarrySpeed = 15.0f;
     // Start is called before the first frame update
@@ -32,7 +33,8 @@ public class Grabable : MonoBehaviour, IGrabable
         _grabber = grabber;
         _rigidbody.useGravity = false;
         _rigidbody.angularDrag = 10.0f;
-
+        _carryDistance = (transform.position - grabber.transform.position).magnitude;
+        _rotationFactor = Quaternion.Inverse(_grabber.transform.rotation) * transform.rotation;
     }
 
     private void Carry()
@@ -40,6 +42,7 @@ public class Grabable : MonoBehaviour, IGrabable
         _rigidbody.velocity =
             (_grabber.transform.position + _grabber.transform.forward * _carryDistance - transform.position) *
             CarrySpeed;
+        transform.rotation = _grabber.transform.rotation * _rotationFactor;
     }
     
     public virtual void Release()
