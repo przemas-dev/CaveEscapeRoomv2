@@ -20,13 +20,12 @@ public class SafeButton : MonoBehaviour, IInteractable
 		
 	}
 
-	public bool Interact()
+	public void Interact()
 	{
 		Debug.Log("Button Clicked!");
 		if (ButtonType == SafeButtonType.LetterC) Safe.Clear();
 		else if(ButtonType==SafeButtonType.Asterisk){}
 		else if (ButtonType >= SafeButtonType.Digit0 && ButtonType <= SafeButtonType.Digit9)Safe.InsertNumber((int)ButtonType);
-		return true;
 	}
 
 

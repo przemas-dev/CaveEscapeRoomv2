@@ -6,13 +6,12 @@ public class Switch : MonoBehaviour,IInteractable {
 
     public GameObject[] SwitchableObjects;
 
-    public virtual bool Interact()
+    public virtual void Interact()
     {
         foreach(var switchable in SwitchableObjects)
         {
             switchable.GetComponent<ISwitchable>().Switch();
         }
-        return true;
     }
 
     // Use this for initialization

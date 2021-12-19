@@ -34,13 +34,12 @@ public class HintController : MonoBehaviour, IInteractable
         }
     }
 
-    public bool Interact()
+    public void Interact()
     {
         int rand = Random.Range(1, 7);
         ChangeMaterial(rand);
         hintOnScreen = true;
         timer = 0.0f;
-        return false;
     }
 
     public void ChangeMaterial(int index)

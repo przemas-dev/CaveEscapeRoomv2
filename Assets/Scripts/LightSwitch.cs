@@ -23,14 +23,14 @@ public class LightSwitch : Switch
 		
 	}
 
-    public override bool Interact()
+    public override void Interact()
     {
         
         isOn = !isOn;
         _audioSource.Play();
         SetActiveObject(isOn);
         nv.RPC("SetActiveObject", RPCMode.AllBuffered, isOn);
-        return base.Interact();
+        base.Interact();
     }
 
 

@@ -17,9 +17,8 @@ public class PadlockWheel : MonoBehaviour,IInteractable
 		
 	}
 
-	public bool Interact()
+	public void Interact()
 	{
 		Padlock.SpinDiskUp(WheelNumber);
-		return true;
 	}
 }
