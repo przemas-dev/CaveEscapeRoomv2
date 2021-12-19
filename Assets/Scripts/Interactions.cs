@@ -4,19 +4,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Interactions : MonoBehaviour {
-
-    
+public class Interactions : MonoBehaviour
+{
     public float InteractionRange = 2.0f;
-    private PlayerState PlayerState { get; set; }
-    
+    private PlayerStateEnum PlayerState { get; set; }
+
     public GameObject FlyStickObject;
     private IGrabable _grabbedObject;
     private NetworkView nv;
     private GameObject _observedObject;
 
     // Use this for initialization
-    void Start ()
+    private void Start()
     {
         nv = GetComponent<NetworkView>();
 
@@ -44,34 +43,35 @@ public class Interactions : MonoBehaviour {
         if (interactable != null) interactable.Interact();
         if (grabable == null) return;
         grabable.Grab(FlyStickObject);
-        
-        PlayerState = PlayerState.Carrying;
+
+        PlayerState = PlayerStateEnum.Carrying;
         _grabbedObject = grabable;
     }
 
     private void ReleasedFire()
     {
         _grabbedObject.Release();
-        PlayerState = PlayerState.NotOccupied;
+        PlayerState = PlayerStateEnum.NotOccupied;
     }
+
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.L))
         {
-            if(PlayerState==PlayerState.Carrying)
+            if (PlayerState == PlayerStateEnum.Carrying)
                 ReleasedFire();
-            else if(PlayerState==PlayerState.NotOccupied)
+            else if (PlayerState == PlayerStateEnum.NotOccupied)
                 PressedFire();
         }
     }
 
     private void Awake()
     {
-        PlayerState = PlayerState.NotOccupied;
+        PlayerState = PlayerStateEnum.NotOccupied;
     }
-    
-    
-    GameObject GetObservedObject()
+
+
+    private GameObject GetObservedObject()
     {
         RaycastHit hit;
         if (Physics.Raycast(FlyStickObject.transform.position, FlyStickObject.transform.forward, out hit))
@@ -81,15 +81,22 @@ public class Interactions : MonoBehaviour {
         }
         return null;
     }
-    
+
     private IGrabable Grabable(GameObject gameObject)
     {
         var grabable = gameObject.GetComponent<IGrabable>();
-        return grabable != null && ((MonoBehaviour) grabable).enabled ? grabable : null;
+        return grabable != null && ((MonoBehaviour)grabable).enabled ? grabable : null;
     }
+
     private IInteractable Interactable(GameObject gameObject)
     {
         var interactable = gameObject.GetComponent<IInteractable>();
-        return interactable != null && ((MonoBehaviour) interactable).enabled ? interactable : null;
+        return interactable != null && ((MonoBehaviour)interactable).enabled ? interactable : null;
+    }
+
+    private enum PlayerStateEnum
+    {
+        Carrying,
+        NotOccupied
     }
 }
