@@ -11,11 +11,10 @@ public class Interactions : MonoBehaviour {
     private PlayerState PlayerState { get; set; }
     
     public GameObject FlyStickObject;
-    private IGrabable _grabbedObject = null;
+    private IGrabable _grabbedObject;
     private NetworkView nv;
     private GameObject _observedObject;
-    private Rigidbody rigidbody;
-    
+
     // Use this for initialization
     void Start ()
     {
@@ -82,6 +81,7 @@ public class Interactions : MonoBehaviour {
         }
         return null;
     }
+    
     private IGrabable Grabable(GameObject gameObject)
     {
         var grabable = gameObject.GetComponent<IGrabable>();
