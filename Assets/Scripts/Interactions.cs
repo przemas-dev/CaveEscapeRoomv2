@@ -50,7 +50,9 @@ public class Interactions : MonoBehaviour
 
     private void ReleasedFire()
     {
+        if (_grabbedObject == null) return;
         _grabbedObject.Release();
+        _grabbedObject = null;
         PlayerState = PlayerStateEnum.NotOccupied;
     }
 
