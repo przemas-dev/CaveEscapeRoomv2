@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 public class Indicator : MonoBehaviour {
 
-	public GameObject tube;
+	public GameObject indicator;
 	public Material material;
 	private MeshRenderer rend;
 	private NetworkView nv;
@@ -24,9 +24,9 @@ public class Indicator : MonoBehaviour {
 
 	private void OnCollisionEnter(Collision other)
 	{
-		if (other.gameObject == tube)
+		if (other.gameObject == indicator)
 		{
-			rend = tube.GetComponent<MeshRenderer>();
+			rend = indicator.GetComponent<MeshRenderer>();
 			ChangeMaterial(rend);
 		}
 	}
