@@ -11,7 +11,7 @@ public class Padlock : MonoBehaviour {
 	public Transform[] NumberDisks = new Transform[3];
 	public AudioClip[] PadlockSounds;
 	
-	private bool _isOpened = false;
+	public bool _isOpened = false;
 	private int[] _digits = new int[3];
 	private AudioSource _audioSource;
     private NetworkView nv;

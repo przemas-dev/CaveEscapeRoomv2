@@ -14,10 +14,12 @@ public class Interactions : MonoBehaviour
     private NetworkView nv;
     private GameObject _observedObject;
 
+
     // Use this for initialization
     private void Start()
     {
         nv = GetComponent<NetworkView>();
+        
 
         Lzwp.AddAfterInitializedAction(Init);
     }
@@ -65,11 +67,13 @@ public class Interactions : MonoBehaviour
             else if (PlayerState == PlayerStateEnum.NotOccupied)
                 PressedFire();
         }
+
     }
 
     private void Awake()
     {
         PlayerState = PlayerStateEnum.NotOccupied;
+        
     }
 
 

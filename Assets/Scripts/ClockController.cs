@@ -11,6 +11,7 @@ public class ClockController : MonoBehaviour,ISwitchable {
     private int minutes = 59;
     private bool code = false;
     private NetworkView nv;
+    
 
 
     // Use this for initialization
@@ -42,6 +43,7 @@ public class ClockController : MonoBehaviour,ISwitchable {
                 changeTime();
             }
         }
+       
     }
 
     public void changeTime()
@@ -87,4 +89,6 @@ public class ClockController : MonoBehaviour,ISwitchable {
     {
         showCode("95:00");
     }
+
+    
 }
