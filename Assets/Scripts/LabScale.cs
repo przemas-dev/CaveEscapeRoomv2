@@ -18,10 +18,11 @@ public class LabScale : MonoBehaviour
 	private float _value = 0.0f;
 	private int _remainingWeighingFrames = 0;
 	private bool _powerOn = true;
-    private NetworkView nv;
-	
-	void Start () {
-        nv = GetComponent<NetworkView>();
+	private NetworkView nv;
+
+	void Start()
+	{
+		nv = GetComponent<NetworkView>();
 	}
 
 	public void Switch()
@@ -40,17 +41,18 @@ public class LabScale : MonoBehaviour
 	{
 		_screenText = _screenValue.ToString("F2");
 		//TextMesh.text = _powerOn ? _screenText : "";
-        nv.RPC("ChangeTextRPC", RPCMode.All, _powerOn ? _screenText : "");
-    }
+		nv.RPC("ChangeTextRPC", RPCMode.All, _powerOn ? _screenText : "");
+	}
 
-    [RPC]
-    private void ChangeTextRPC(string text)
-    {
-        TextMesh.text = text;
-    }
-    
+	[RPC]
+	private void ChangeTextRPC(string text)
+	{
+		TextMesh.text = text;
+	}
 
-	void Update () {
+
+	void Update()
+	{
 
 		if (_remainingWeighingFrames > 1)
 		{
@@ -58,7 +60,7 @@ public class LabScale : MonoBehaviour
 			_remainingWeighingFrames--;
 			ScreenUpdate();
 		}
-		else if(_remainingWeighingFrames == 1)
+		else if (_remainingWeighingFrames == 1)
 		{
 			_screenValue = _value;
 			_remainingWeighingFrames--;

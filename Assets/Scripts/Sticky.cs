@@ -25,8 +25,10 @@ public class Sticky : MonoBehaviour
 
 	private void OnCollisionEnter(Collision other)
 	{
-		var grabable = Grabable(other.gameObject);
-		if (grabable != null && grabable.IsGrabbed==true)_stickedObjects.Add(other.gameObject);
+		if(other.gameObject.CompareTag("sticky"))
+        {
+			_stickedObjects.Add(other.gameObject);
+		}
 	}
 
 	private void OnCollisionStay(Collision other)
@@ -40,9 +42,4 @@ public class Sticky : MonoBehaviour
 		}
 	}
 	
-	private IGrabable Grabable(GameObject gameObject)
-	{
-		var grabable = gameObject.GetComponent<IGrabable>();
-		return grabable != null && ((MonoBehaviour) grabable).enabled ? grabable : null;
-	}
 }
