@@ -29,7 +29,7 @@ public class WinCondition : MonoBehaviour {
             if (padlock.GetComponent<Padlock>()._isOpened) count++;
         }
 
-        if (count == 5)
+        if (count == padlocks.Length)
         {
             win = true;
             _audioSource.Play();

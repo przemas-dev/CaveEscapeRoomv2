@@ -11,8 +11,8 @@ public class Padlock : MonoBehaviour {
 	public Transform[] NumberDisks = new Transform[3];
 	public AudioClip[] PadlockSounds;
 	
-	public bool _isOpened = false;
-	private int[] _digits = new int[3];
+	public bool _isOpened { get; private set; }
+	private int[] _digits = new int[4];
 	private AudioSource _audioSource;
     private NetworkView nv;
 	
@@ -23,9 +23,10 @@ public class Padlock : MonoBehaviour {
 		if (RandomDiskStartPos)
 		{
 			var r = new System.Random();
-			SetDiskNumber(0, r.Next(9), false);
-			SetDiskNumber(1, r.Next(9), false);
-			SetDiskNumber(2, r.Next(9), false);
+			for (int i = 0; i < NumberDisks.Length; i++)
+			{
+				SetDiskNumber(i,r.Next(9),false);
+			}
 		}
 	}
 	
@@ -74,7 +75,7 @@ public class Padlock : MonoBehaviour {
 	}
 	private void CheckNumbers()
 	{
-		int code = _digits[0] * 100 + _digits[1] * 10 + _digits[2];
+		int code = _digits[0] * 1000 + _digits[1] * 100 + _digits[2] * 10 + _digits[3];
 		if (code == CipherCode) OpenPadlock();
 	}
 	
