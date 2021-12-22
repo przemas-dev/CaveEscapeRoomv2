@@ -4770,6 +4770,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   padlocks:
   - {fileID: 66863460}
+  - {fileID: 2008150055}
+  - {fileID: 2000012274}
+  - {fileID: 1096124852}
+  - {fileID: 1508238015}
 --- !u!1 &1090396591 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100088, guid: 3fbe4b2983f79ec45b3413fe6ec7336b, type: 3}
@@ -4786,6 +4790,11 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.000060000046, y: 0.000060000046, z: 0.0011}
   m_Center: {x: -2.3283064e-10, y: 9.313226e-10, z: 0}
+--- !u!1 &1096124852 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1397618927620400, guid: 990f2a0e2e4d28842bf137feba2dcbfa,
+    type: 2}
+  m_PrefabInternal: {fileID: 895299447}
 --- !u!1 &1097305237 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100038, guid: 3fbe4b2983f79ec45b3413fe6ec7336b, type: 3}
@@ -6266,6 +6275,11 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.0020800002, y: 0.00006000007, z: 0.00006000007}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &1508238015 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1397618927620400, guid: 990f2a0e2e4d28842bf137feba2dcbfa,
+    type: 2}
+  m_PrefabInternal: {fileID: 1611469079}
 --- !u!1 &1509686010 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100072, guid: 3fbe4b2983f79ec45b3413fe6ec7336b, type: 3}
@@ -6446,101 +6460,6 @@ NetworkView:
   m_ViewID:
     m_ID: 55
     m_Type: 1
---- !u!82 &1546982147
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1546982141}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 91924cf2592b45f419b6c2fc165b2e55, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!1 &1554455680 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1227915802839076, guid: d60db509304d3e0419e5ae2e848bcbd7,
@@ -9767,6 +9686,11 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.0003, y: 0.0004400001, z: 0.000060000028}
   m_Center: {x: 0, y: 9.313226e-10, z: 0}
+--- !u!1 &2000012274 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1397618927620400, guid: 990f2a0e2e4d28842bf137feba2dcbfa,
+    type: 2}
+  m_PrefabInternal: {fileID: 934442546}
 --- !u!1001 &2007836039
 Prefab:
   m_ObjectHideFlags: 0
@@ -9809,6 +9733,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6cc8aa0c126f3304f97eb9adcd025189, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &2008150055 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1397618927620400, guid: 990f2a0e2e4d28842bf137feba2dcbfa,
+    type: 2}
+  m_PrefabInternal: {fileID: 2141440174}
 --- !u!1001 &2015601442
 Prefab:
   m_ObjectHideFlags: 0
