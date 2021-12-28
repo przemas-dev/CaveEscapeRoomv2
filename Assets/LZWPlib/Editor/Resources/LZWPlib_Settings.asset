@@ -13,9 +13,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   editorInstanceID: 0
   customConfigObject: {fileID: 11400000, guid: 951e6490e8b52a54d9bca25f82825940, type: 2}
-  configObjectForTesting: {fileID: 11400000, guid: 46ab4ae7dbe419c4c8d72881d614b913,
+  configObjectForTesting: {fileID: 11400000, guid: b285a761209f45140bd391439eaa3769,
     type: 2}
   customConfigObjectForTesting: {fileID: 11400000, guid: 951e6490e8b52a54d9bca25f82825940,
     type: 2}
-  configObjectForBuildApp: {fileID: 11400000, guid: 46ab4ae7dbe419c4c8d72881d614b913,
+  configObjectForBuildApp: {fileID: 11400000, guid: b285a761209f45140bd391439eaa3769,
     type: 2}
