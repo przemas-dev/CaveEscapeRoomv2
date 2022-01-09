@@ -8,7 +8,7 @@ public class Locker : MonoBehaviour, IGrabable
 {
 	
 	private Transform _grabberTransform;
-	public float GrabDistance = 1.0f;
+	private float _grabDistance;
 	public int SpeedFactor = 100;
 	private Rigidbody _rigidbody;
 	private Vector3 _grabPosition;
@@ -25,7 +25,7 @@ public class Locker : MonoBehaviour, IGrabable
 	{
 		if (IsGrabbed)
 		{
-			_grabPosition = _grabberTransform.position + _grabberTransform.forward * GrabDistance;
+			_grabPosition = _grabberTransform.position + _grabberTransform.forward * _grabDistance;
 			_rigidbody.AddForceAtPosition((_grabPosition - ForcePoint.position) * SpeedFactor,
 				ForcePoint.position);
 		}
@@ -55,6 +55,7 @@ public class Locker : MonoBehaviour, IGrabable
 	{
 		IsGrabbed = true;
 		_grabberTransform = grabber.transform;
+		_grabDistance = (transform.position - _grabberTransform.position).magnitude;
 		_rigidbody.angularDrag = 10.0f;
 	}
 

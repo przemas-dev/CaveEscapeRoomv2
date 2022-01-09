@@ -11,6 +11,7 @@ public class ClockController : MonoBehaviour,ISwitchable {
     private int minutes = 59;
     private bool code = false;
     private NetworkView nv;
+    public bool end = false;
     
 
 
@@ -28,7 +29,7 @@ public class ClockController : MonoBehaviour,ISwitchable {
         {
             timer += Time.deltaTime;
 
-            if (code)
+            if (code && !end)
             {
                 timerCode += Time.deltaTime;
 
@@ -38,7 +39,7 @@ public class ClockController : MonoBehaviour,ISwitchable {
                     code = false;
                 }
             }
-            else
+            else if(!end)
             {
                 changeTime();
             }

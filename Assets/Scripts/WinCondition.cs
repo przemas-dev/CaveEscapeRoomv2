@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class WinCondition : MonoBehaviour {
 
-    private bool win = false;
+    public bool win = false;
 
     private AudioSource _audioSource;
 
     public GameObject[] padlocks;
+    public ClockController _clock;
 
     // Use this for initialization
     void Start () {
         _audioSource = GetComponent<AudioSource>();
-
     }
 
     // Update is called once per frame
@@ -33,6 +33,7 @@ public class WinCondition : MonoBehaviour {
         {
             win = true;
             _audioSource.Play();
+            _clock.end = true;
         }
         else count = 0;
     }
