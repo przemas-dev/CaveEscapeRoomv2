@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ClockController : MonoBehaviour,ISwitchable {
+public class ClockController : MonoBehaviour, ISwitchable
+{
 
     public TextMesh TextMesh;
     private float timer = 0.0f;
@@ -12,24 +13,38 @@ public class ClockController : MonoBehaviour,ISwitchable {
     private bool code = false;
     private NetworkView nv;
     public bool end = false;
-    
+
 
 
     // Use this for initialization
-    void Start ()
+    void Start()
     {
         nv = GetComponent<NetworkView>();
         TextMesh.text = "60:00";
-	}
-	
-	// Update is called once per frame
-	void Update ()
+    }
+
+    // Update is called once per frame
+    void Update()
     {
-        if(Lzwp.sync.isMaster)
+        if (Lzwp.sync.isMaster)
         {
             timer += Time.deltaTime;
 
-            if (code && !end)
+            if (minutes < 0)
+            {
+                if (code && !end)
+                {
+                    timerCode += Time.deltaTime;
+
+                    if (timerCode > 5)
+                    {
+                        timerCode = 0;
+                        code = false;
+                    }
+                }
+                else SetText("00:00");
+            }
+            else if (code && !end)
             {
                 timerCode += Time.deltaTime;
 
@@ -39,12 +54,13 @@ public class ClockController : MonoBehaviour,ISwitchable {
                     code = false;
                 }
             }
-            else if(!end)
+            else if (!end)
             {
                 changeTime();
             }
+
         }
-       
+
     }
 
     public void changeTime()
@@ -57,15 +73,21 @@ public class ClockController : MonoBehaviour,ISwitchable {
             minutes -= 1;
         }
 
-        if (seconds < 10)
+        if (seconds < 10 && minutes < 10)
+        {
+            SetText("0" + minutes.ToString() + ":0" + seconds.ToString());
+        }
+        else if (seconds < 10)
         {
             SetText(minutes.ToString() + ":0" + seconds.ToString());
-            //TextMesh.text = minutes.ToString() + ":0" + seconds.ToString();
+        }
+        else if (minutes < 10)
+        {
+            SetText("0" + minutes.ToString() + ":" + seconds.ToString());
         }
         else
         {
             SetText(minutes.ToString() + ":" + seconds.ToString());
-            //TextMesh.text = minutes.ToString() + ":" + seconds.ToString();
         }
     }
 
@@ -91,5 +113,5 @@ public class ClockController : MonoBehaviour,ISwitchable {
         showCode("95:00");
     }
 
-    
+
 }

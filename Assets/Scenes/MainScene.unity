@@ -4517,7 +4517,7 @@ Prefab:
     - target: {fileID: 114810793624457228, guid: 4e989319e1a6746439e05903ce1e807d,
         type: 2}
       propertyPath: config.general.movementType
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 114810793624457228, guid: 4e989319e1a6746439e05903ce1e807d,
         type: 2}
