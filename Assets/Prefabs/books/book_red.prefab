@@ -41,6 +41,7 @@ GameObject:
   - component: {fileID: 54041292193133324}
   - component: {fileID: 65568325756008016}
   - component: {fileID: 114634862266752634}
+  - component: {fileID: 148450930619562310}
   m_Layer: 0
   m_Name: book_red
   m_TagString: Untagged
@@ -198,3 +199,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CarrySpeed: 15
+--- !u!148 &148450930619562310
+NetworkView:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1878081598267660}
+  m_Enabled: 1
+  m_StateSynchronization: 1
+  m_Observed: {fileID: 4047880602449716}
+  m_ViewID:
+    m_ID: 0
+    m_Type: 0

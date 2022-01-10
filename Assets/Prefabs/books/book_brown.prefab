@@ -41,6 +41,7 @@ GameObject:
   - component: {fileID: 54821319059438394}
   - component: {fileID: 65520078452978014}
   - component: {fileID: 114069360031415440}
+  - component: {fileID: 148706559667521834}
   m_Layer: 0
   m_Name: book_brown
   m_TagString: Untagged
@@ -198,3 +199,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CarrySpeed: 15
+--- !u!148 &148706559667521834
+NetworkView:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1723882829473744}
+  m_Enabled: 1
+  m_StateSynchronization: 1
+  m_Observed: {fileID: 4239158911857164}
+  m_ViewID:
+    m_ID: 0
+    m_Type: 0
